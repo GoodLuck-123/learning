@@ -56,7 +56,7 @@ void img1_callback(const sensor_msgs::ImageConstPtr &img_msg)
 // 将img_msg转成cv::Mat
 cv::Mat getImageFromMsg(const sensor_msgs::ImageConstPtr &img_msg)
 {
-    // cv_bridge用于与ROS数据转换
+    // cv_bridge是ROS和OpenCV之间的接口
     cv_bridge::CvImageConstPtr ptr;
     // 如果传感器驱动发布的图像消息是8UC1则转成mono8，最后转成指向CvImage的指针
     if (img_msg->encoding == "8UC1")
@@ -87,6 +87,7 @@ void sync_process()
     {
         if(STEREO)
         {
+            // header是ROS一个消息类型，包含消息的元数据信息，如时间戳与坐标系
             cv::Mat image0, image1;
             std_msgs::Header header;
             double time = 0;
@@ -96,6 +97,7 @@ void sync_process()
                 double time0 = img0_buf.front()->header.stamp.toSec();
                 double time1 = img1_buf.front()->header.stamp.toSec();
                 // 0.003s sync tolerance
+                // ±0.003s 外的消息都不要
                 if(time0 < time1 - 0.003)
                 {
                     img0_buf.pop();
