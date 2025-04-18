@@ -11,6 +11,7 @@
 1.同上修改本地config文件`load_previous_pose_graph`为1
 2.开loop_fusion节点加载pose_graph
 > `cd sh_files/p600`
+>
 > `bash loop.sh`
 
 3.开imu与相机驱动
