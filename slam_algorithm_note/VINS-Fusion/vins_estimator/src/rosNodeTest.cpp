@@ -170,7 +170,8 @@ void imu_callback(const sensor_msgs::ImuConstPtr &imu_msg)
     return;
 }
 
-
+// 这个函数是拿来干嘛的？本文件没看到哪里用了
+// 在主函数中被注释掉了，整个算法没用到
 void feature_callback(const sensor_msgs::PointCloudConstPtr &feature_msg)
 {
     map<int, vector<pair<int, Eigen::Matrix<double, 7, 1>>>> featureFrame;
