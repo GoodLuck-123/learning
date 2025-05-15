@@ -28,3 +28,10 @@
 > `rqt_image_view`
 > `rostopic echo /mavros/imu/data`
 > `rostopic echo /mavros/global_position/raw/fix`
+
+
+# 日志
+## 20250515
+### 硬盘未挂载
+
+### 因分辨率约为原来的两倍而算力不足 vins计算时间加倍
