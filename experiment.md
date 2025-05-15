@@ -23,3 +23,8 @@
 
 5.开vins算法
 > `bash vins.sh`
+
+## 查看数据命令
+> `rqt_image_view`
+> `rostopic echo /mavros/imu/data`
+> `rostopic echo /mavros/global_position/raw/fix`
