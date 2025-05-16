@@ -4,8 +4,8 @@
 > `vim os_project/vins_fusion/config/our_config.yaml`
 
 2.制作先验图
-### *bag2gps.py*文件中改包名并运行
-### *chazhi.py*中的*GPS.csv*改成新生成的*包命_gps.csv* *pose_graph*中最后的*xxx.txt*改成*xxx.csv*并运行
+*bag2gps.py*文件中改包名并运行
+*chazhi.py*中的*GPS.csv*改成新生成的*包命_gps.csv* *pose_graph*中最后的*xxx.txt*改成*xxx.csv*并运行
 
 3.离线跑可以选择数据包的开始时间
 > `rosbag play xxx.bag -s 140`
@@ -39,9 +39,12 @@
 ## 20250515
 ### 硬盘未挂载
 
+### 先是内参重新标，后是尺度有问题，数据经常乱跑 换板卡
+
 ### 因分辨率约为原来的两倍而算力不足 vins计算时间加倍
 
 ## 20250516
-### 换一个板卡硬盘挂上了，没权限
+### 换一个板卡 硬盘挂上了，没权限
 > `sudo chmod 777 disk`
-### 
+
+### 数据没有经常乱跑了，尺度有一点问题
