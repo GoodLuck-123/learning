@@ -1,10 +1,15 @@
-*出差实验*
 # 制作先验图
 ## 修改参数使loop为录制先验图模式
 1.在实验板卡本地config文件中修改`load_previous_pose_graph`为0即可进行先验图的录制
 > `vim os_project/vins_fusion/config/our_config.yaml`
 
 2.制作先验图
+### *bag2gps.py*文件中改包名并运行
+### *chazhi.py*中的*GPS.csv*改成新生成的*包命_gps.csv* *pose_graph*中最后的*xxx.txt*改成*xxx.csv*并运行
+
+3.离线跑可以选择数据包的开始时间
+> `rosbag play xxx.bag -s 140`
+从140开始
 
 # 无人机正式起飞录数据
 ## 修改参数使loop为加载先验图进行回环
@@ -35,3 +40,8 @@
 ### 硬盘未挂载
 
 ### 因分辨率约为原来的两倍而算力不足 vins计算时间加倍
+
+## 20250516
+### 换一个板卡硬盘挂上了，没权限
+> `sudo chmod 777 disk`
+### 
