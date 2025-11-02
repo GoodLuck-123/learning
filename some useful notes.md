@@ -12,11 +12,15 @@
 
 ### 配置FAST_LIVO2
 
+安装conda社区稳定的ros1自带pcl和eigen，故仅Sophus需要手动编译源码，用此仓库内的Sophus（版本为a621ff）且做了源码修改以通过编译
 ```bash
-conda install -c conda-forge pcl
-
+cd Sophus
+mkdir build && cd build
+cmake .. -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX
+make -j10
+make install
 ```
-
+`注意别用sudo权限，因为miniconda虚拟环境不在root权限的目录里`
 
 
 ### 备份conda环境
