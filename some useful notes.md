@@ -4,10 +4,7 @@
 
 ### conda安装ros1与ros2环境
 
-```bash
-conda install -c conda-forge pcl
 
-```
 
 
 
@@ -15,7 +12,10 @@ conda install -c conda-forge pcl
 
 ### 配置FAST_LIVO2
 
+```bash
+conda install -c conda-forge pcl
 
+```
 
 
 
