@@ -4,8 +4,8 @@
 > `vim os_project/vins_fusion/config/our_config.yaml`
 
 2.制作先验图
-*bag2gps.py*文件中改包名并运行
-*chazhi.py*中的*GPS.csv*改成新生成的*bagname_gps.csv* *pose_graph*中最后的*xxx.txt*改成*xxx.csv*并运行
+运行*bag2gps.py*代码前，代码中要改刚录好的包名
+运行*chazhi.py*代码前，代码中的*xxGPS.csv*改成刚刚运行*bag2gps.py*新生成的*bagname_gps.csv*然后还需要将*pose_graph*目录中最后一个txt文件*xxx.txt*把后缀改成*xxx.csv*
 
 3.离线跑可以选择数据包的开始时间
 > `rosbag play xxx.bag -s 140`
