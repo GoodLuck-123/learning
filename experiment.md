@@ -31,20 +31,5 @@
 
 ## 查看数据命令
 > `rqt_image_view`
-> `rostopic echo /mavros/imu/data`
+> `rostopic echo /gnw_imu/data`
 > `rostopic echo /mavros/global_position/raw/fix`
-
-
-# 日志
-## 20250515
-### 硬盘未挂载
-
-### 先是内参重新标，后是尺度有问题，数据经常乱跑 换板卡
-
-### 因分辨率约为原来的两倍而算力不足 vins计算时间加倍
-
-## 20250516
-### 换一个板卡 硬盘挂上了，没权限
-> `sudo chmod 777 disk`
-
-### 数据没有经常乱跑了，尺度有一点问题
