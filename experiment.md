@@ -5,7 +5,7 @@
 
 2.制作先验图
 *bag2gps.py*文件中改包名并运行
-*chazhi.py*中的*GPS.csv*改成新生成的*包命_gps.csv* *pose_graph*中最后的*xxx.txt*改成*xxx.csv*并运行
+*chazhi.py*中的*GPS.csv*改成新生成的*bagname_gps.csv* *pose_graph*中最后的*xxx.txt*改成*xxx.csv*并运行
 
 3.离线跑可以选择数据包的开始时间
 > `rosbag play xxx.bag -s 140`
